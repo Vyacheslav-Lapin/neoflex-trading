@@ -27,7 +27,8 @@ public class Couses {
 
     val html = getHtmlAsString(document);
 
-    return getValueByXpath(html, "(//td[.='BTC']/following-sibling::td)[1]/a/text()");
+    return getValueByXpath(html, "(//td[.='BTC']/following-sibling::td)[1]/a/text()")
+        .parseDouble();
 
 //    return document
 //        .selectXpath("(//td[.='BTC']/following-sibling::td)[1]/a/text()", TextNode.class)
